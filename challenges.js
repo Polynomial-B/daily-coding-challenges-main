@@ -116,15 +116,15 @@ addList(7,-12) //=> -5
 -----------------------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
-// function addList(...args) {
-// 	if (args.length === 0) {
-// 		return 0;
-// 	} else {
-// 		return args.reduce((acc, curr) => {
-// 			return acc + curr;
-// 		}, 0);
-// 	}
-// }
+function addList(...args) {
+	if (args.length === 0) {
+		return 0;
+	} else {
+		return args.reduce((acc, curr) => {
+			return acc + curr;
+		}, 0);
+	}
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 05-computeRemainder
@@ -150,13 +150,13 @@ computeRemainder(10.5, 3) //=> 1.5
 // Your solution for 05-computeRemainder here:
 
 
-// function computeRemainder(num1, num2) {
-//   if (num2 === 0) {
-//     return Infinity
-//   } else {
-//   return num1 % num2
-//   }
-// }
+function computeRemainder(num1, num2) {
+  if (num2 === 0) {
+    return Infinity
+  } else {
+  return num1 % num2
+  }
+}
 
 
 
