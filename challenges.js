@@ -184,16 +184,16 @@ range(5,2) //=> "First argument must be less than second"
 // Your solution for 06-range here:
 
 
-// function range(int1, int2) {
-//   rangeArray = []
-//   counter = 0
-//   difference = int2 - int1
-//   while (counter <= difference) {
-//     rangeArray.push(counter)
-//     counter ++
-//   }
-//   return rangeArray
-// }
+function range(int1, int2) {
+  rangeArray = []
+  if (int1 > int2) {
+    return "First argument must be less than second"
+  }
+  for (let i = int1; i < int2; i++) {
+  rangeArray.push(i)
+  }
+  return rangeArray
+}
 
 
 /*-----------------------------------------------------------------------------
@@ -214,6 +214,11 @@ reverseUpcaseString("SEI Rocks!") //=> "!SKCOR IES"
 -----------------------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
+function reverseUpcaseString(string){
+  return reversedString = string.split("").reverse().join("").toUpperCase();
+  // console.log(reversedString)
+  }
+
 /*-----------------------------------------------------------------------------
 Challenge: 08-removeEnds
 
@@ -231,6 +236,14 @@ removeEnds('SEB Rocks!') //=> "EB Rocks"
 removeEnds('a') //=> "" (empty string)
 -----------------------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
+
+function removeEnds(string){
+  if(string.length < 3) {
+    return ""
+  } else {
+    return string.split("").splice(1, string.length - 2).join("")
+}}
+
 
 /*-----------------------------------------------------------------------------
 Challenge: 09-charCount
@@ -269,6 +282,18 @@ charCount('Today is fantastic!')
 }
 -----------------------------------------------------------------------------*/
 // Your solution for 09-charCount here:
+
+// ? Here... 
+
+// function charCount(chars) {
+//   const countArray = chars.split("")
+//   console.log(countArray)
+//   countArray.forEach((char) => {
+//     console.log(char)
+//   })
+// }
+// charCount("hello")
+
 
 /*-----------------------------------------------------------------------------
 Challenge: 10-formatWithPadding
