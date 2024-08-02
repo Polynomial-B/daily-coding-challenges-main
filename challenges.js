@@ -283,16 +283,20 @@ charCount('Today is fantastic!')
 -----------------------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
-// ? Here... 
 
-// function charCount(chars) {
-//   const countArray = chars.split("")
-//   console.log(countArray)
-//   countArray.forEach((char) => {
-//     console.log(char)
-//   })
-// }
-// charCount("hello")
+function charCount(chars) {
+  let countObj = {}
+  
+  chars.split("").forEach((char)=>{
+    if(!countObj[char]) {
+      countObj[char] = 1
+    } else {
+      countObj[char] += 1
+    }
+  });
+  return countObj
+}
+
 
 
 /*-----------------------------------------------------------------------------
@@ -321,6 +325,18 @@ formatWithPadding(1234, '*', 3) //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
+function formatWithPadding(num, padFormat, length) {
+  if(typeof num !== "number") {
+    return "Please add a valid number"
+  }
+  let numToString = num.toString()
+  while (numToString.length < length) {
+    numToString = padFormat + numToString
+  }
+  return numToString
+}
+
+
 /*-----------------------------------------------------------------------------
 Challenge: 11-isPalindrome
 
@@ -344,6 +360,13 @@ isPalindrome('A nut for a jar of tuna') //=> true
 isPalindrome('') //=> true
 -----------------------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
+
+
+function isPalindrome(word){
+  let wordCheck = word.replace(/ /g, "").toLowerCase().split("").reverse().join("")
+  let palindromeCheck = word.replace(/ /g, "").toLowerCase()
+  return wordCheck === palindromeCheck;
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 12-hammingDistance
