@@ -394,6 +394,24 @@ hammingDistance('abc', 'ab') //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
 
+
+
+function hammingDistance(str1, str2) {
+  if(str1.length !== str2.length) {
+    return NaN
+  }
+  let strArray1 = str1.split("")
+  let strArray2 = str2.split("")
+  let hashAmount = 0
+
+  strArray1.forEach((letter, index)=>{
+    if(letter !== strArray2[index]){
+      hashAmount += 1
+    }
+  })
+  return hashAmount
+}
+
 /*-----------------------------------------------------------------------------
 Challenge: 13-mumble
 
