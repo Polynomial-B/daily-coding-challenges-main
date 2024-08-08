@@ -440,7 +440,6 @@ function mumble(string) {
   return string.split("").map((char, index) => char.repeat(index + 1)).join("-");
 }
 
-
 /*-----------------------------------------------------------------------------
 Challenge: 14-fromPairs
 
@@ -464,6 +463,14 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ])
 //=> { name: "Sally", age: 24 }
 -----------------------------------------------------------------------------*/
 // Your solution for 14-fromPairs here:
+
+function fromPairs(array) {
+  console.log(array)
+
+
+}
+
+fromPairs([1, 2, 3])
 
 /*-----------------------------------------------------------------------------
 Challenge: 15-mergeObjects
